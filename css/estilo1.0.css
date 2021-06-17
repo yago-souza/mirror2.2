@@ -95,6 +95,11 @@ header {
     right: 0;
 }
 
+.menu-opcoes a{
+    color: rgb(34, 34, 34);
+    text-decoration: none;
+}
+
 .menu-opcoes ul {
     position: relative;
     font-size: 15px;
@@ -103,11 +108,19 @@ header {
 .menu-opcoes ul li {
     display:inline;
     margin-left: 20px;
+}
+
+.menu-opcoes ul li a  {
+    text-decoration: none;
+    margin: 5px;
     padding: 5px;
 }
 
-.menu-opcoes a{
-    color: rgb(34, 34, 34);
+.menu-opcoes ul li a:hover {
+    color: #ccc;
+    background-color: #333;
+    border-radius: 5px;
+    opacity: 0.7;
 }
 
 a {
@@ -144,7 +157,6 @@ main {
     padding-bottom: 20px;
 }
 
-}
 #banner-destaque {
     padding: 20px 0 0 20px;
     text-align: right;
@@ -395,7 +407,6 @@ strike{
     background-color: green;
     height: 100px;
 }
-
 .absoluto1 {
     position: relative;
     background-color: red;
@@ -404,7 +415,6 @@ strike{
     left:0px;
     height: 80%;
 }
-
 .absoluto2 {
     position: relative;
     background-color: yellow;
