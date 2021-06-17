@@ -1,8 +1,8 @@
 body {
     color: #333;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Helvetica, sans-serif;
-    margin: 0;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h2 {
@@ -14,8 +14,8 @@ figure {
     background-color: #f2eded;
     border: 1px solid #ccc;
     text-align: center;
-    padding: 10px;
-    margin: 0px;
+    padding: 30px;
+    margin:0px;
 }
 
 .miniatura {
@@ -28,7 +28,7 @@ figure {
 
 figcaption {
     font-style: italic;
-    margin-top: 10px;
+    margin-top: 10px;  
 }
 
 #centro-distribuicao {
@@ -86,10 +86,24 @@ header {
     top:10px;
 }
 
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover{ 
+    color: grey;
+}
+
 .menu-opcoes {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+.menu-opcoes a{
+    color: rgb(34, 34, 34);
+    text-decoration: none;
 }
 
 .menu-opcoes ul {
@@ -102,18 +116,17 @@ header {
     margin-left: 20px;
 }
 
-.menu-opcoes a{
-    color: rgb(34, 34, 34);
+.menu-opcoes ul li a  {
     text-decoration: none;
+    margin: 5px;
+    padding: 5px;
 }
 
-a {
-    color: #036;
-    text-decoration: none;
-}
-
-a:hover{ 
-    color: grey;
+.menu-opcoes ul li a:hover {
+    color: #ccc;
+    background-color: #333;
+    border-radius: 5px;
+    opacity: 0.7;
 }
 
 .banner-destaque {
@@ -164,7 +177,6 @@ main {
     box-shadow: inset 0 0 40px #333;
 }
 
-
 #busca {
     margin-top: 10px;
     margin-left: 10px;
@@ -176,7 +188,6 @@ main {
 #busca input[type=text]{
     color: #333;
     border-radius: 4px;
-
 }
 
 #busca button {
@@ -185,7 +196,6 @@ main {
     vertical-align: middle;
     width: 20px;
     height: 20px;
-    
 }
 
 #busca, #menu-departamentos {
@@ -195,30 +205,62 @@ main {
     width: 220px;
     margin-right: 10px;
     padding-left: 10px;
-    
 }
 
 #menu-departamentos {
-    clear:left;
-    line-height: 1.50em;
+    margin-top: 0px;
     margin-left: 10px;
-}
-
-#menu-departamentos ul {
-    width: 210px;
+    padding: 10px 10px 0 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    clear: left;
+    background-color: #dcdcf5;
+    height: 380px;
+    overflow: hidden;
+  
 }
 
 #menu-departamentos li {
-    background-color: #FFF;
-    margin-bottom:5px;
-    padding: 5px auto;
-    line-height: 1.50em;
+    background-color: #dcdcf5;
+    padding: 10px;
+
 }
 
-#menu-departamentos a:link {
+#menu-departamentos ul{
+    list-style: none;
+}
+
+
+#menu-departamentos li ul {
+    overflow:hidden;
+    padding: 0;
+    margin: 0px;
+    max-height: 0px;
+    opacity: 0;
+    transition:  all 2s ease-in-out;
+}
+
+#menu-departamentos li ul li a{
     text-decoration: none;
-    color: #333;
-    
+    border-bottom: 0px;
+    color: grey;
+    transition: ease-in-out 0.2s;
+}
+#menu-departamentos li ul li a:hover{
+    border-bottom: 1px solid;
+    text-decoration: none;
+    color: black;
+    transition: border-bottom ease-in 1s;
+}
+
+#menu-departamentos li:hover ul {
+    text-decoration: none;
+    display:block;
+    max-height: 200px;
+    margin: 0px;
+    transform:translate(0px);
+    opacity: 1;
+    transition: all 1.1s ease-in-out;
 }
 
 .paineis {
@@ -379,7 +421,6 @@ strike {
     color: red;
 }
 
-
 .menu-departamentos li ul {
     display: none;
     transition: all 1s  cubic-bezier(.99, .01, .41, 1);
@@ -391,15 +432,11 @@ strike {
     transition: all 1s  cubic-bezier(.99, .01, .41, 1);
 
 }
-#menu-departamentos a:hover{
-    color: gray;
-}
 
 .menu-departamentos li:hover ul li a {
     color: #333;
     transition: all 1s  cubic-bezier(.99, .01, .41, 1);
 }
-
 .menu-departamentos li ul li a:hover {
     color:pink;
     transition: all 1s cubic-bezier(.99, .01, .41, 1);
@@ -421,13 +458,13 @@ strike {
     color: red;
     transition: top 4s, color 1s ease;
  }
- 
+
  .novidades ol li figure {
     transition: 1s;   
  }
 
  .novidades ol li figure:hover {
-    transform: scale(1.1) translate(0px, 0px) skewX(0deg) rotate(0deg);
+    transform: scale(1.3) translate(0px, 0px) skewX(0deg) rotate(0deg);
     box-shadow: 0 0 10px #333;
     transition: 1s;   
  }
@@ -437,7 +474,7 @@ strike {
  }
 
  .mais-vendidos ol li figure:hover {
-    transform: scale(1.1) translate(0px, 0px) skewX(0deg) rotate(0deg);
+    transform: scale(1.3) translate(0px, 0px) skewX(0deg) rotate(0deg);
     box-shadow: 0 0 10px #333;
     transition: 1s;
  }
@@ -453,6 +490,11 @@ strike {
     margin: 50px;
     padding: 10px;
 }
+    
+
+
+
+
 
 
 
